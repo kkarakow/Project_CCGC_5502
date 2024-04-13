@@ -1,0 +1,16 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: Update and upgrade apt packages
+    apt:
+      update_cache: yes
+      upgrade: dist
+  - name: Install nginx
+    apt:
+      name: nginx
+      state: latest
+  - name: Start nginx
+    service:
+      name: nginx
+      state: started
+      enabled: yes

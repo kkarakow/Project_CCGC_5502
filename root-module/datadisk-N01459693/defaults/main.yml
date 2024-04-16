@@ -1,0 +1,8 @@
+# datadisk-N01459693/defaults/main.yml
+part1_size: 4GB
+part2_size: 5GB
+part1_mount: /part1
+part2_mount: /part2
+part1_filesystem: xfs
+part2_filesystem: ext4
+disk_device: /dev/sdb

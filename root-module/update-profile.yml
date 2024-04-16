@@ -1,0 +1,6 @@
+---
+- hosts: linux
+  become: yes  # Typically required to edit /etc/profile
+
+  roles:
+    - datadisk-N01459693

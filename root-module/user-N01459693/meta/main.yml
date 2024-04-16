@@ -1,0 +1,24 @@
+---
+galaxy_info:
+  author: Kate
+  description: This role creates user accounts, adds them to groups, and manages their SSH keys.
+  company: Kate
+  license: MIT  # Be sure to use an appropriate license.
+  min_ansible_version: 2.9
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+        - focal
+  galaxy_tags:
+    - users
+    - ssh
+    - system
+
+dependencies: []
+

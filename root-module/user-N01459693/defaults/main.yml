@@ -1,0 +1,12 @@
+---
+# List of users to be added
+users:
+  - username: user100
+  - username: user200
+  - username: user300
+
+# Group to be added
+group_name: cloudadmins
+
+# Additional group to add users to
+additional_group: wheel

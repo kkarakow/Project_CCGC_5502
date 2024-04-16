@@ -1,0 +1,13 @@
+---
+- name: Ensure lines are present in /etc/profile
+  ansible.builtin.lineinfile:
+    path: /etc/profile
+    line: "{{ item }}"
+    create: no
+    state: present
+    insertafter: EOF
+    backup: yes
+  loop:
+    - "#Test block added by Ansible...... N01459693"
+    - "export TMOUT=1500"
+  tags: update_profile

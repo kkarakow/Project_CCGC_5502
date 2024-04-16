@@ -1,0 +1,11 @@
+- name: Create partition layout
+  community.general.parted:
+    device: "{{ disk_device }}"
+    number: "{{ item.number }}"
+    state: present
+    part_start: "{{ item.part_start }}"
+    part_end: "{{ item.part_end }}"
+  loop:
+    - { number: '1', part_start: '1MiB', part_end: '4096MiB' }
+    - { number: '2', part_start: '4097MiB', part_end: '100%' }
+

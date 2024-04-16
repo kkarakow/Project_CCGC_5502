@@ -1,0 +1,8 @@
+---
+# Default variables
+webserver_package_name: apache2  # Use 'httpd' for CentOS/RHEL
+webserver_service_name: apache2  # Use 'httpd' for CentOS/RHEL
+html_files:
+  - vm1.html
+  - vm2.html
+  - vm3.html

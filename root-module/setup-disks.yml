@@ -1,0 +1,19 @@
+---
+- name: Setup Disks on Linux Hosts
+  hosts: linux
+  become: yes
+  vars:
+    disk_device: /dev/sdb
+    partitions:
+      - part: 1
+        size: 4GiB
+        fstype: xfs
+        mount_point: /part1
+      - part: 2
+        size: 5GiB
+        fstype: ext4
+        mount_point: /part2
+
+  roles:
+    - datadisk-N01459693
+

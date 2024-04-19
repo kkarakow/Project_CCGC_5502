@@ -71,9 +71,10 @@ resource "azurerm_linux_virtual_machine" "linux_vm" {
   admin_username        = "adminuser"
   network_interface_ids = [element(azurerm_network_interface.vm_nic.*.id, count.index)]
 
-  os_disk {
+ os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
+    disk_size_gb         = 10  # Set OS disk size to 10 GB
   }
 
   source_image_reference {
@@ -102,6 +103,7 @@ resource "azurerm_windows_virtual_machine" "windows_vm" {
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
+    disk_size_gb         = 10  
   }
 
   source_image_reference {
